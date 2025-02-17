@@ -6,7 +6,7 @@ const app = express();
 const server = http.createServer(app);
 const io = socketIo(server, {
   cors: {
-    origin: "https://Chat-JS.netlify.app", // Allow only your frontend to connect
+    origin: "https://chat-js-two.netlify.app", // Allow only your frontend to connect
     methods: ["GET", "POST"]
   }
 });
