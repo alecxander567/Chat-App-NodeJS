@@ -24,6 +24,16 @@ io.on("connection", (socket) => {
   });
 });
 
+ // Check connection to backend
+ socket.on("connect", () => {
+      console.log("Connected to the server!");
+  });
+
+  // Handle disconnection
+  socket.on("disconnect", () => {
+      console.log("Disconnected from the server.");
+  });
+
 // Serve static files (optional, if frontend is included)
 app.use(express.static("public"));
 
