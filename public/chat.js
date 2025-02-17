@@ -1,4 +1,4 @@
-    const socket = io("https://your-app-name.vercel.app"); 
+    const socket = io("https://chat-app-node-js-two.vercel.app"); 
     let username = prompt("Enter your name:") || "Anonymous";
 
     // Update user profile name in sidebar
