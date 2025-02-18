@@ -1,4 +1,4 @@
-    const socket = io("http://localhost:3000");
+    const socket = io("https://chat-app-nodejs-txw9.onrender.com");
     let username = prompt("Enter your name:") || "Anonymous";
 
     // Update user profile name in sidebar
