@@ -6,7 +6,7 @@ const app = express();
 const server = http.createServer(app);
 const io = socketIo(server, {
   cors: {
-    origin: "*", // Allow all origins
+    origin: "https://chat-app-nodejs-txw9.onrender.com", // Allow all origins
     methods: ["GET", "POST"]
   }
 });
