@@ -4,16 +4,16 @@ function createRandomCircles() {
     const circles = [];
     const maxAttempts = 100; // Limit retries to avoid infinite loops
 
-    for (let i = 0; i < 20; i++) {
+for (let i = 0; i < 20; i++) {
         let circle, positionValid;
         let attempts = 0;
         
-        do {
-            positionValid = true; // Assume the position is valid
-            const randomColor = colors[Math.floor(Math.random() * colors.length)];
-            const randomSize = Math.floor(Math.random() * (70 - 30 + 1)) + 30; // Size between 30px and 70px
-            const randomTop = Math.floor(Math.random() * (container.offsetHeight - randomSize));
-            const randomLeft = Math.floor(Math.random() * (container.offsetWidth - randomSize));
+do {
+positionValid = true;
+const randomColor =       colors[Math.floor(Math.random() * colors.length)];
+const randomSize = Math.floor(Math.random() * (70 - 30 + 1)) + 30; 
+const randomTop = Math.floor(Math.random() * (container.offsetHeight - randomSize));
+const randomLeft = Math.floor(Math.random() * (container.offsetWidth - randomSize));
 
             // Check if the new position overlaps with any existing circles
             for (const existingCircle of circles) {
