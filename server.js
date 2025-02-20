@@ -7,7 +7,7 @@ const app = express();
 const server = http.createServer(app);
 const io = socketIo(server, {
   cors: {
-    origin: "https://chat-app-nodejs-txw9.onrender.com", // Allow all origins
+    origin: "https://chat-app-nodejs-txw9.onrender.com", 
     methods: ["GET", "POST"]
   }
 });
@@ -18,7 +18,7 @@ io.on("connection", (socket) => {
 
 
   socket.on("chatMessage", (data) => {
-    io.emit("chatMessage", data); // Broadcast to all users
+    io.emit("chatMessage", data); 
   });
 
 
