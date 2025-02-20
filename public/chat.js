@@ -3,6 +3,7 @@ const socket = io("https://chat-app-nodejs-txw9.onrender.com");
 
     document.getElementById('profile-name').innerText = username;
 
+
     function sendMessage() {
         let msg = document.getElementById('message').value.trim();
         if (msg !== "") {
@@ -23,9 +24,9 @@ socket.on('chatMessage', (data) => {
             </div>
         `;
         chatBox.scrollTop = chatBox.scrollHeight;
-    });
+});
    
 
-function toggleSidebar() {       document.getElementById('sidebar').classList.toggle('active');
-    }
+function toggleSidebar() {            document.getElementById('sidebar').classList.toggle('active');
+}
 
