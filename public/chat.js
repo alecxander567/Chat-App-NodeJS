@@ -1,7 +1,6 @@
-    const socket = io("https://chat-app-nodejs-txw9.onrender.com");
+const socket = io("https://chat-app-nodejs-txw9.onrender.com");
     let username = prompt("Enter your name:") || "Anonymous";
 
-    // Update user profile name in sidebar
     document.getElementById('profile-name').innerText = username;
 
     function sendMessage() {
@@ -12,7 +11,8 @@
         }
     }
 
-    socket.on('chatMessage', (data) => {
+
+socket.on('chatMessage', (data) => {
         let chatBox = document.getElementById('chat-box');
         let messageClass = (data.user === username) ? 'sent' : 'received';
         chatBox.innerHTML += `
@@ -24,9 +24,8 @@
         `;
         chatBox.scrollTop = chatBox.scrollHeight;
     });
+   
 
-    // Sidebar toggle function
-    function toggleSidebar() {
-        document.getElementById('sidebar').classList.toggle('active');
+function toggleSidebar() {       document.getElementById('sidebar').classList.toggle('active');
     }
 
