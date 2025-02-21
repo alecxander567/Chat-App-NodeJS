@@ -35,7 +35,7 @@ function createRandomCircles() {
             circle.style.left = `${randomLeft}px`;
             container.appendChild(circle);
 
-            circles.push({ top: randomTop, left: randomLeft, size: randomSize }); // Store position
+            circles.push({ top: randomTop, left: randomLeft, size: randomSize });
         }
 
              attempts++;
