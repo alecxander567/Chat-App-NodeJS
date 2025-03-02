@@ -1,7 +1,6 @@
 body {
     font-family: Arial, sans-serif;
 }
-/* Sidebar styles */
 .sidebar {
     position: fixed;
     left: -250px;
@@ -18,13 +17,12 @@ body {
 }
 .chat-container {
     max-width: 500px;
-    margin: 50px auto 0; /* Moves chat box higher */
+    margin: 50px auto 0; 
     background: white;
     padding: 15px;
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
-
 #chat-box {
     height: 400px;
     overflow-y: scroll;
@@ -32,10 +30,15 @@ body {
     padding: 10px;
     background: #f8f9fa;
 }
-
-/* Sent message styles (green for sender) */
-.message.sent .text {
-    background-color: #dcf8c6; /* Light green */
+#private-chat-box {
+    height: 400px; 
+    overflow-y: scroll;
+    border: 1px solid #ccc;
+    padding: 10px;
+    background: #f8f9fa;
+}
+.private-message.sent .text {
+    background-color: #dcf8c6; 
     color: black;
     text-align: left;
     padding: 20px;
@@ -43,13 +46,42 @@ body {
     width: fit-content;
     max-width: 75%;
     margin: 5px;
-    margin-left: auto; /* Align it to the right */
+    margin-left: auto;
     margin-right: 0;
     box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.1);
-    overflow-wrap: break-word; /* Ensures text wraps within the container */
+    overflow-wrap: break-word; 
     word-wrap: break-word; 
 }
-/* Received message styles (light grey for receiver) */
+.private-message.received .text {
+    background-color: lightgray;
+    color: black;
+    text-align: left;
+    padding: 20px;
+    border-radius: 20px;
+    width: fit-content;
+    max-width: 75%;
+    margin: 5px;
+    margin-right: auto; 
+    margin-left: 0;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.1);
+    overflow-wrap: break-word;
+    word-wrap: break-word; 
+}
+.message.sent .text {
+    background-color: #dcf8c6; 
+    color: black;
+    text-align: left;
+    padding: 20px;
+    border-radius: 20px;
+    width: fit-content;
+    max-width: 75%;
+    margin: 5px;
+    margin-left: auto;
+    margin-right: 0;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.1);
+    overflow-wrap: break-word; 
+    word-wrap: break-word; 
+}
 .message.received .text {
     background-color: lightgray;
     color: black;
@@ -59,30 +91,26 @@ body {
     width: fit-content;
     max-width: 75%;
     margin: 5px;
-    margin-right: auto; /* Align it to the left */
+    margin-right: auto; 
     margin-left: 0;
     box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.1);
-    overflow-wrap: break-word; /* Ensures text wraps within the container */
+    overflow-wrap: break-word;
     word-wrap: break-word; 
 }
-
 .background-container {
-    position: fixed; /* Full-page background */
+    position: fixed; 
     top: 0;
     left: 0;
     width: 100vw;
     height: 100vh;
-    z-index: -1; /* Behind all content */
-    overflow: hidden; /* Prevents circles from going outside */
+    z-index: -1; 
+    overflow: hidden;
 }
-
 .circle-design {
     position: absolute;
     border-radius: 50%;
-    opacity: 0.5; /* Semi-transparent for subtle effect */
+    opacity: 0.5; 
 }
-
-/* Different Colors */
 .circle-green { background-color: #00fa00; box-shadow: 0 0 10px #00fa00;}
 .circle-blue { background-color: #00a6ff; box-shadow: 0 0 10px #00a6ff;}
 .circle-red { background-color: #ffda08; box-shadow: 0 0 10px  #ffda08;}
