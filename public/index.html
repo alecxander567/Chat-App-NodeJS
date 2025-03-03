@@ -9,11 +9,10 @@
 </head>
 <body class="bg-dark">
 
-    <div class="background-container"></div> 
+<div class="background-container"></div> 
     <div class="container mt-5">
         <div class="d-flex justify-content-between align-items-center mb-3">
             <button class="btn btn-primary" onclick="toggleSidebar()">☰ Profile</button>
-    
         </div>
     </div>
     
@@ -21,23 +20,36 @@
         <h4>User Profile</h4>
         <p><strong>Name:</strong> <span id="profile-name">Anonymous</span></p>
         <p><strong>Status:</strong> Online</p>
-        <a href="private.html"  style="margin: auto;  color: white;"><strong>Chat: </strong>Private message</a>
+        <button onclick="showPrivate()" style="margin: auto;  color: white; border: none; background: transparent; margin-bottom: 20px;">Private chat</button>
+        <button onclick="showPublic()" style="margin: auto;  color: white; border: none; background: transparent; margin-bottom: 20px;">Public chat</button>
         <button class="btn btn-danger w-100" onclick="toggleSidebar()">Close</button>
     </div>
-
-        <div class="chat-container mt-3" style="padding: 10px;">
-            <div id="chat-box" class="p-3 rounded"></div>
-            <div class="message sent">
-            <div class="input-group mt-3">
-                <input id="message" type="text" class="form-control" placeholder="Type a message...">
-                <button class="btn btn-primary" onclick="sendMessage()">Send</button>
-            </div>
+    
+    <div class="chat-container mt-3" style="padding: 10px;" id="public">
+        <div id="chat-box" class="p-3 rounded"></div>
+        <div class="message sent">
+        <div class="input-group mt-3">
+            <input id="message" type="text" class="form-control" placeholder="Type a message...">
+            <button class="btn btn-primary" onclick="sendMessage()">Send</button>
         </div>
     </div>
+</div>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="/socket.io/socket.io.js"></script>
-    <script src="chat.js"></script>
-    <script src="design.js"></script>
+<div class="chat-container mt-3" style="padding: 10px;" id="private">
+    <div id="private-chat-box" class="p-3 rounded chat-box"></div>
+    <div class="input-group mt-3">
+        <input id="privateMessage" type="text" class="form-control" placeholder="Type a private message...">
+        <button class="btn btn-success" onclick="sendPrivateMessage()">Send Private</button>
+    </div>
+    <select id="receiver" class="form-select" style="margin-top: 10px;">
+        <option value="">Select User</option>
+    </select>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+<script src="/socket.io/socket.io.js"></script>
+<script src="chat.js"></script>
+<script src="design.js"></script>
+<script src="showChat.js"></script>
 </body>
 </html>
