@@ -14,7 +14,7 @@ function sendPrivateMessage() {
         let privateChatBox = document.getElementById("private-chat-box");
         privateChatBox.innerHTML += `
             <div class="message sent">
-                <div class="text"><strong>To ${receiver}:</strong> ${privateMsg}</div>
+                 <div class="text"><strong>You:</strong> ${privateMsg}</div>
             </div>
         `;
         privateChatBox.scrollTop = privateChatBox.scrollHeight;
@@ -48,7 +48,7 @@ socket.on("privateMessage", (data) => {
     let privateChatBox = document.getElementById("private-chat-box");
     privateChatBox.innerHTML += `
         <div class="message received">
-            <div class="text"><strong>From ${data.sender}:</strong> ${data.text}</div>
+            <div class="text"><strong>${data.sender}:</strong> ${data.text}</div>
         </div>
     `;
     privateChatBox.scrollTop = privateChatBox.scrollHeight;
