@@ -12,7 +12,7 @@
 <div class="background-container"></div> 
     <div class="container mt-5">
         <div class="d-flex justify-content-between align-items-center mb-3">
-            <button class="btn btn-primary" onclick="toggleSidebar()">☰ Profile</button>
+            <button class="btn btn-primary" onclick="toggleSidebar()">☰</button>
         </div>
     </div>
     
@@ -43,7 +43,9 @@
         <div class="message sent">
         <div class="input-group mt-3">
             <input id="message" type="text" class="form-control" placeholder="Type a message...">
-            <button class="btn btn-primary" onclick="sendMessage()">Send</button>
+            <button class="btn btn-primary" onclick="sendMessage()"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-send-fill" viewBox="0 0 16 16">
+            <path d="M15.964.686a.5.5 0 0 0-.65-.65L.767 5.855H.766l-.452.18a.5.5 0 0 0-.082.887l.41.26.001.002 4.995 3.178 3.178 4.995.002.002.26.41a.5.5 0 0 0 .886-.083zm-1.833 1.89L6.637 10.07l-.215-.338a.5.5 0 0 0-.154-.154l-.338-.215 7.494-7.494 1.178-.471z"/>
+            </svg></button>
         </div>
     </div>
 </div>
@@ -52,10 +54,12 @@
     <div id="private-chat-box" class="p-3 rounded chat-box"></div>
     <div class="input-group mt-3">
         <input id="privateMessage" type="text" class="form-control" placeholder="Type a private message...">
-        <button class="btn btn-primary" onclick="sendPrivateMessage()">Send</button>
+        <button class="btn btn-primary" onclick="sendPrivateMessage()"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-send-fill" viewBox="0 0 16 16">
+        <path d="M15.964.686a.5.5 0 0 0-.65-.65L.767 5.855H.766l-.452.18a.5.5 0 0 0-.082.887l.41.26.001.002 4.995 3.178 3.178 4.995.002.002.26.41a.5.5 0 0 0 .886-.083zm-1.833 1.89L6.637 10.07l-.215-.338a.5.5 0 0 0-.154-.154l-.338-.215 7.494-7.494 1.178-.471z"/>
+        </svg></button>
     </div>
     <select id="receiver" class="form-select" style="margin-top: 10px;">
-        <option value="">Select User</option>
+        <option value="">Online Users</option>
     </select>
 </div>
 
