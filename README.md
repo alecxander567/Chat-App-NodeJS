@@ -1,3 +1,3 @@
 # Chat-App-NodeJS
 
-A real-time chat app using node.js server with express and socket.io😃
+A Node.js-based real-time chat application using Express and Socket.io😃
