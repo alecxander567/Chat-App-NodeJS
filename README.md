@@ -1,3 +1,6 @@
-# Chat-App-NodeJS
+# Chat-App-NodeJS #
+## Key Features ##
+- Real-time chat 
+- Has private chat
 
-A Node.js-based real-time chat application using Express and Socket.io😃
+## Languages I used : ##
